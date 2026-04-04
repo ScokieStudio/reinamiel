@@ -1,0 +1,47 @@
+import aboutImage from "@/assets/about-salon.jpg";
+
+const AboutSection = () => {
+  return (
+    <section id="nosotros" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          <div className="flex justify-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-pearl rounded-sm" />
+              <img
+                src={aboutImage}
+                alt="Interior del centro Kendra Beauty Care"
+                className="relative w-full max-w-md h-[450px] object-cover rounded-sm"
+                loading="lazy"
+                width={800}
+                height={900}
+              />
+            </div>
+          </div>
+
+          <div>
+            <p className="font-body text-xs tracking-wide-elegant uppercase text-primary mb-4">
+              Sobre Nosotros
+            </p>
+            <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-8">
+              La experiencia <span className="italic">Kendra</span>
+            </h2>
+            <div className="space-y-5 font-body text-sm text-muted-foreground font-light leading-relaxed">
+              <p>
+                En Kendra Beauty Care creemos que cada persona merece un momento de pausa. Nuestro espacio en Lanús fue diseñado para envolverte en calma desde el primer instante.
+              </p>
+              <p>
+                Trabajamos con productos de primera línea y protocolos personalizados, porque entendemos que tu piel es única. Nuestro equipo de profesionales se capacita constantemente para ofrecerte lo último en tendencias y tecnología estética.
+              </p>
+              <p>
+                Más que un centro de estética, somos tu refugio de bienestar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
