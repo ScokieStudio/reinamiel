@@ -58,6 +58,7 @@ const Header = () => {
           {[
             ["Inicio", "hero"],
             ["Servicios", "servicios"],
+            ["Nosotros", "nosotros"],
             ["Contacto", "contacto"],
           ].map(([label, id]) => (
             <button
