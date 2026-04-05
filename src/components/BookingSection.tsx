@@ -32,7 +32,30 @@ const BookingSection = () => {
       toast.error("Por favor completá los campos obligatorios.");
       return;
     }
-    toast.success("¡Reserva enviada con éxito! Te contactaremos pronto.");
+
+    // Construct WhatsApp message
+    const phoneNumber = "5491133651245"; // Kendra's phone number as seen in Footer
+    const textLines = [
+      "¡Hola! Me gustaría hacer una reserva.",
+      "",
+      "*Detalles de la reserva:*",
+      `- *Nombre:* ${form.name}`,
+      `- *Teléfono:* ${form.phone}`,
+      form.email ? `- *Email:* ${form.email}` : '',
+      `- *Servicio:* ${form.service}`,
+      `- *Fecha:* ${form.date}`,
+      `- *Horario:* ${form.time}`,
+      form.message ? `\n*Mensaje adicional:*\n${form.message}` : ''
+    ];
+    const text = textLines.filter(line => line !== '').join('\n');
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+
+    toast.success("¡Redirigiendo a WhatsApp!");
     setForm({ name: "", phone: "", email: "", service: "", date: "", time: "", message: "" });
   };
 
