@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { Send } from "lucide-react";
 import bookingImage from "@/assets/booking-spa.jpg";
 
 const services = [
@@ -36,14 +37,14 @@ const BookingSection = () => {
   };
 
   const inputClasses =
-    "w-full border border-border bg-background px-4 py-3.5 text-sm font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary transition-colors duration-300 rounded-sm";
+    "w-full border border-border bg-background px-4 py-3.5 text-sm font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary transition-colors duration-300 rounded-lg";
 
   return (
     <section id="reserva" className="py-24 md:py-32 bg-pearl">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <div>
-            <p className="font-body text-xs tracking-wide-elegant uppercase text-primary mb-4">
+            <p className="font-body text-lg tracking-wide-elegant uppercase text-primary mb-4">
               Reserva
             </p>
             <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">
@@ -89,9 +90,10 @@ const BookingSection = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground py-4 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-sm"
+                className="w-full bg-primary text-primary-foreground py-4 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-lg flex items-center justify-center gap-2"
               >
                 Confirmar Reserva
+                <Send size={16} strokeWidth={1.5} className="text-white" />
               </button>
             </form>
           </div>

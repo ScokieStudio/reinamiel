@@ -40,13 +40,13 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => scrollTo("reserva")}
-            className="hidden md:inline-flex bg-primary text-primary-foreground px-6 py-2.5 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-sm"
+            className="hidden md:inline-flex bg-primary text-primary-foreground px-6 py-2.5 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-lg"
           >
             Reservar Cita
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
+            className="md:hidden text-white"
           >
             {isOpen ? <X strokeWidth={1.5} size={24} /> : <Menu strokeWidth={1.5} size={24} />}
           </button>

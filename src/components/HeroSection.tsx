@@ -15,12 +15,12 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl">
-          <p className="animate-fade-in-up font-body text-xs tracking-wide-elegant uppercase text-muted-foreground mb-6">
+          <p className="animate-fade-in-up font-body text-lg tracking-wide-elegant uppercase text-muted-foreground mb-6">
             Beauty &amp; Wellness
           </p>
           <h1 className="animate-fade-in-up-delay-1 font-heading text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] text-foreground mb-6">
@@ -32,7 +32,7 @@ const HeroSection = () => {
           </p>
           <button
             onClick={() => scrollTo("reserva")}
-            className="animate-fade-in-up-delay-3 bg-primary text-primary-foreground px-10 py-4 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-sm"
+            className="animate-fade-in-up-delay-3 bg-primary text-primary-foreground px-10 py-4 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-lg"
           >
             Agendar mi turno
           </button>
