@@ -1,3 +1,5 @@
+import { Sparkles, Scissors, Hand, Heart, Flower2, Omega, Brush, BrushIcon, Syringe, Waves, HandHelping } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Send } from "lucide-react";
@@ -34,17 +36,16 @@ const BookingSection = () => {
     }
 
     // Construct WhatsApp message
-    const phoneNumber = "5491133651245"; // Kendra's phone number as seen in Footer
+    const phoneNumber = "5491124045098"; // Reina Miel's phone number as seen in Footer
     const textLines = [
-      "¡Hola! Me gustaría hacer una reserva.",
+      "¡Hola! Reina Miel, me gustaría hacer una reserva.",
       "",
-      "*Detalles de la reserva:*",
-      `- *Nombre:* ${form.name}`,
-      `- *Teléfono:* ${form.phone}`,
-      form.email ? `- *Email:* ${form.email}` : '',
-      `- *Servicio:* ${form.service}`,
-      `- *Fecha:* ${form.date}`,
-      `- *Horario:* ${form.time}`,
+      `Nombre: ${form.name}`,
+      `Teléfono: ${form.phone}`,
+      form.email ? `Email: ${form.email}` : '',
+      `Servicio: ${form.service}`,
+      `Fecha: ${form.date.split('-').reverse().join('/')}`,
+      `Horario: ${form.time}`,
       form.message ? `\n*Mensaje adicional:*\n${form.message}` : ''
     ];
     const text = textLines.filter(line => line !== '').join('\n');
@@ -67,14 +68,17 @@ const BookingSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <div>
-            <p className="font-body text-lg tracking-wide-elegant uppercase text-primary mb-4">
+            <p className="font-body text-lg tracking-wide-elegant uppercase text-primary-foreground mb-4">
               Reserva
             </p>
             <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">
-              Reserva tu momento Kendra
+              Reserva tu momento <br />
+              <span className="font-playwrite-hu text-xl md:text-2xl lg:text-3xl text-foreground">Reina Miel</span>
             </h2>
-            <p className="font-body text-muted-foreground font-light mb-10 leading-relaxed">
-              Elegí el servicio, la fecha y el horario que más te convenga. Nos pondremos en contacto para confirmar tu turno.
+            <p className="font-body text-lg md:text-xl lg:text-xl text-muted-foreground font-light mb-10 leading-relaxed">
+              Elegí el servicio, la fecha y el horario que más te convenga.
+              <br />
+              Nos pondremos en contacto para confirmar tu turno.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -113,7 +117,7 @@ const BookingSection = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground py-4 text-xs tracking-elegant uppercase font-body hover:bg-greige-dark transition-colors duration-300 rounded-lg flex items-center justify-center gap-2"
+                className="w-full bg-primary-foreground/80   text-background py-4 text-xs tracking-elegant uppercase font-body hover:bg-primary-foreground transition-colors duration-300 rounded-lg flex items-center justify-center gap-2"
               >
                 Confirmar Reserva
                 <Send size={16} strokeWidth={1.5} className="text-white" />
@@ -124,8 +128,8 @@ const BookingSection = () => {
           <div className="hidden lg:block">
             <img
               src={bookingImage}
-              alt="Sala de tratamientos Kendra"
-              className="w-full h-[700px] object-cover rounded-sm"
+              alt="Sala de tratamientos Reina Miel"
+              className="w-full h-[725px] object-cover border-[14px] border-white"
               loading="lazy"
               width={800}
               height={1024}

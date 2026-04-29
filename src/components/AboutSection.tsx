@@ -10,7 +10,7 @@ const AboutSection = () => {
               <div className="absolute -inset-4 bg-pearl rounded-sm" />
               <img
                 src={aboutImage}
-                alt="Interior del centro Kendra Beauty Care"
+                alt="Interior del centro Reina Miel Centro de Estética"
                 className="relative w-full max-w-md h-[650px] object-cover rounded-sm"
                 loading="lazy"
                 width={800}
@@ -20,16 +20,16 @@ const AboutSection = () => {
           </div>
 
           <div>
-            <p className="font-body text-lg tracking-wide-elegant uppercase text-primary mb-4">
+            <p className="font-body text-lg tracking-wide-elegant uppercase text-primary-foreground mb-4">
               Sobre Nosotros
             </p>
             <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-8">
-              La experiencia <span className="italic">Kendra</span>
+              La experiencia <span className="font-playwrite-hu text-xl md:text-2xl lg:text-3xl text-foreground">Reina Miel</span>
             </h2>
-            <div className="space-y-5 font-body text-lg text-muted-foreground font-light leading-relaxed">
+            <div className="space-y-5 font-body text-base md:text-lg lg:text-xl text-muted-foreground font-light leading-relaxed">
               <p>
-                En Kendra Beauty Care creemos que cada persona merece un momento de pausa.
-                <br />Nuestro espacio en Lanús fue diseñado para envolverte en calma desde el primer instante.<br />
+                En Reina Miel creemos que cada persona merece un momento de pausa.
+                <br />Nuestro espacio en Avellaneda fue diseñado para envolverte en calma desde el primer instante.<br />
               </p>
               <p>
                 Trabajamos con productos de primera línea y protocolos personalizados, porque entendemos que tu piel es única.

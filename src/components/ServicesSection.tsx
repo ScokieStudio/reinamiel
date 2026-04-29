@@ -35,17 +35,17 @@ const services: ServiceItem[] = [
   },
   {
     icon: Omega,
-    title: "Tratamientos de Cupping",
-    description: "Nuestro servicio de Cupping Electrónico de última generación utiliza ventosas de alta tecnología para una succión precisa y uniforme.",
+    title: "Tratamientos Anticelulíticos",
+    description: "Es un conjunto de procedimientos estéticos diseñados para estimular la circulación.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="servicios" className="py-24 md:py-24 bg-pearl">
+    <section id="servicios" className="py-20 md:py-20 bg-pearl">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 md:mb-20">
-          <p className="font-body text-lg tracking-wide-elegant uppercase text-primary mb-4">
+          <p className="font-body text-xl tracking-wide-elegant uppercase text-primary-foreground mb-4">
             Nuestros Servicios
           </p>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
@@ -57,20 +57,20 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`bg-background p-10 md:p-12 group hover:bg-primary transition-colors duration-500 ${index === services.length - 1 && services.length % 3 === 2
+              className={`bg-background p-10 md:p-12 group hover:bg-primary-foreground/80 transition-colors duration-500 ${index === services.length - 1 && services.length % 3 === 2
                 ? "md:col-span-2 lg:col-span-1"
                 : ""
                 }`}
             >
               <service.icon
                 strokeWidth={1}
-                size={32}
-                className="text-white transition-colors duration-500 mb-6"
+                size={36}
+                className="text-primary-foreground hover:text-white transition-colors duration-500"
               />
-              <h3 className="font-heading text-xl md:text-2xl font-normal text-foreground group-hover:text-primary-foreground transition-colors duration-500 mb-3">
+              <h3 className="font-body text-lg md:text-xl font-normal text-foreground group-hover:text-white transition-colors duration-500 mb-3">
                 {service.title}
               </h3>
-              <p className="font-body text-sm text-muted-foreground group-hover:text-primary-foreground/80 transition-colors duration-500 leading-relaxed font-light">
+              <p className="font-body text-sm text-muted-foreground group-hover:text-white transition-colors duration-500 leading-relaxed font-light">
                 {service.description}
               </p>
             </div>

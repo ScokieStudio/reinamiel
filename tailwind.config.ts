@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         heading: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         body: ['Lato', 'system-ui', 'sans-serif'],
+        'qwitcher-grypen': ['"Qwitcher Grypen"', 'cursive'],
+        'playwrite-hu': ['"Playwrite HU"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
